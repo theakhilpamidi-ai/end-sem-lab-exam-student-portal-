@@ -1,0 +1,52 @@
+:root {
+  --navy: #12263f;
+  --navy-soft: #1d3a5c;
+  --chalk: #eef2f6;
+  --paper: #ffffff;
+  --gold: #f2b705;
+  --ink: #1a2433;
+  --muted: #5a6779;
+  --error: #b3261e;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--chalk);
+  line-height: 1.6;
+}
+
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(3rem, 10vw, 7rem) 1.5rem;
+}
+
+.main h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  max-width: 14ch;
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+}
+
+.lede { font-size: 1.15rem; color: var(--muted); max-width: 56ch; margin: 0; }
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
